@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    restart: unless-stopped
+    build: .
+    volumes:
+      - ./todo:/todo
+
+  nginx:
+    restart: unless-stopped
+    build: ./nginx
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+    volumes:
+      - ./todo:/todo
