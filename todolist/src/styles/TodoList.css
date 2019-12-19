@@ -1,0 +1,41 @@
+.body {
+    background-color: #F4F6FA;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header {
+    display: flex;
+    width: 960px;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+}
+
+header div a {
+    text-decoration: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #3366FF;
+    color: #fff;
+    border: none;
+}
+
+header i {
+    font-size: 30px;
+    font-family: 'Sofia', cursive;
+}

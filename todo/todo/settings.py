@@ -25,7 +25,7 @@ SECRET_KEY = 'yc@@*viv#pcryn)-7b_jf0(h+aw+kyn%h5e25=eie8(6^*t4p3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["tarzan.dev"]
 
 
 # Application definition
@@ -46,6 +46,12 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth.registration',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 SITE_ID = 1
 
@@ -110,6 +116,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -129,5 +142,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_REQUIRED = False
+
+REST_AUTH_SERIALIZERS = {
+    'LOGIN_SERIALIZER': 'todo.serializers.LoginSerializer'
+}
+
+ACCOUNT_SESSION_REMEMBER = None
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'

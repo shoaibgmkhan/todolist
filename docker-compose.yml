@@ -10,6 +10,8 @@ services:
   nginx:
     restart: unless-stopped
     build: ./nginx
+    environment:
+      ENV: 'DEV'
     depends_on:
       - web
     ports:

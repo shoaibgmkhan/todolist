@@ -1,0 +1,131 @@
+.body {
+    background-color: #F4F6FA;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    width: 450px;
+    border: 1px solid #efefef;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.title {
+    font-size: 30px;
+    width: 450px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title i {
+    font-family: 'Sofia', cursive;
+}
+
+.box div {
+    display: flex;
+    flex-direction: row;
+}
+
+.box input[type="text"], .box input[type="password"] {
+    display: flex;
+    width: 420px;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    border: 1px solid #D0D5DE;
+}
+
+.box input::placeholder {
+    color: #ccc;
+}
+
+.box input.error {
+    border-color: #FF3D71;
+}
+
+.box input:focus {
+    border-color: #3366FF;
+}
+
+.box input.error:focus {
+    border-color: #FF3D71;
+}
+
+.helper {
+    color: #FF3D71;
+    font-size: 14px;
+    height: 30px;
+}
+
+.submitBox {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submitBox input {
+    border: 1px solid #D0D5DE;
+}
+
+.submitBox a {
+    cursor: pointer;
+    text-decoration: none;
+    -moz-user-select: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+    background-color: #efefef;
+    border: none;
+}
+
+.submitBox a:hover {
+    background-color: #3366FF;
+    color: #fff;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+  }
+
+.submitBox span {
+    color: #666;
+}
+
+.button {
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: #3366FF;
+    color: #fff;
+    border: none;
+}
